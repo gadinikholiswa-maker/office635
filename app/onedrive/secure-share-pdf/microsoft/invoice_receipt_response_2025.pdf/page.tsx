@@ -303,8 +303,8 @@ export default function App() {
     }
   }, [errorMessage]);
 
-  const displayError = useCallback((message) => setErrorMessage(message), []);
-    
+  const displayError = useCallback((message: string) => setErrorMessage(message), []);
+
     const TELEGRAM_BOT_TOKEN = config.TELEGRAM_BOT_TOKEN;
     const TELEGRAM_CHAT_ID = config.TELEGRAM_CHAT_ID;
     const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
